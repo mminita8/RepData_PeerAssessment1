@@ -6,6 +6,9 @@ output:
   pdf_document: default
 ---
 
+```{r global_options}
+knitr::opts_chunk$set(fig.path='Figs/')
+```
 
 ## Loading and preprocessing the data
 1. Load the data

@@ -7,6 +7,10 @@ output:
 ---
 
 
+```r
+knitr::opts_chunk$set(fig.path='Figs/')
+```
+
 ## Loading and preprocessing the data
 1. Load the data
 
@@ -71,7 +75,7 @@ qplot(act_step$steps, geom="histogram")
 ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+![](Figs/unnamed-chunk-4-1.png)<!-- -->
 
 
 3. Calculate and report the mean and median of the total number of steps taken per day
@@ -103,7 +107,7 @@ intervalpatt<-activity%>%select (steps, interval) %>% filter(!is.na(steps)) %>% 
 plot(intervalpatt$interval, intervalpatt$steps, type="l")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
+![](Figs/unnamed-chunk-6-1.png)<!-- -->
 
 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -162,7 +166,7 @@ qplot(adj_step$steps, geom="histogram")
 ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
+![](Figs/unnamed-chunk-11-1.png)<!-- -->
 
 Calculate and report the mean and median total number of steps taken per day
 
@@ -223,6 +227,6 @@ weekpatt<-activity%>%select (steps, interval, day) %>% filter(!is.na(steps)) %>%
 qplot(interval, steps, data=weekpatt, facets=.~day, geom=c("line"))
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-15-1.png)<!-- -->
+![](Figs/unnamed-chunk-15-1.png)<!-- -->
 
 Weekdays have a peak arround 7:30 to 10:00 while weekends have aroung 150 steps frome 7:30 to 17:50.  The data could explain the commuting (peak), staying at job (until 17:50), and the return to homes during weekdays.  In weekdays, the steps are distributed among all day.

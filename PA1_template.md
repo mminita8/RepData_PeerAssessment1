@@ -128,7 +128,9 @@ print(paste("The total number of missing values is", missval))
 ## [1] "The total number of missing values is 2304"
 ```
 
-2. Devise a strategy for filling in all of the missing values in the dataset (Applying mean for 5min-interval)
+2. Devise a strategy for filling in all of the missing values in the dataset 
+
+Since in the previous stages the mean for 5 min-interval are already calculated and storaged in adjustedact dataset, this is the method employed for filling NA values.
 
 ```r
 adjustedact<-activity

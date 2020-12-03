@@ -436,8 +436,9 @@ print(paste(&quot;The interval with the maximum number of steps is&quot;, maxint
 print(paste(&quot;The total number of missing values is&quot;, missval))</code></pre>
 <pre><code>## [1] &quot;The total number of missing values is 2304&quot;</code></pre>
 <ol start="2" style="list-style-type: decimal">
-<li>Devise a strategy for filling in all of the missing values in the dataset (Applying mean for 5min-interval)</li>
+<li>Devise a strategy for filling in all of the missing values in the dataset</li>
 </ol>
+<p>Since in the previous stages the mean for 5 min-interval are already calculated and storaged in adjustedact dataset, this is the method employed for filling NA values.</p>
 <pre class="r"><code>adjustedact&lt;-activity
 for(i in 1:17568){
   if(is.na(adjustedact$steps[i]))
